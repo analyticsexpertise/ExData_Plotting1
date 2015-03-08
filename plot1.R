@@ -11,9 +11,11 @@
 ## https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
 
 ## Creates the Global Active Power histogram showing Frequency as a function of Global Active Power
-## The histogram contains red bars
+## The histogram contains orange red bars
 ## The histogram contains the title "Global Active Power" centered at the top
 ## The histogram contains x-axis label "Global Active Power (kilowatts)"
+
+## The plot is saved to a png file plot1.png in the working directory
 
 ## Download data file into working directory 
 downloaddata <- function(){
@@ -62,11 +64,12 @@ plot1 <- function(){
   
   ## Create histogram and save to png file in working directory
   
+  
   ## open png graphics device
   png(file="./plot1.png",width=480,height=480)
   
   ## create histogram
-  hist(x = xaxis, col="red",main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
+  hist(x = xaxis, col="orangered1",main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
   
   ## close png graphics device
   dev.off()
